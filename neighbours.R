@@ -13,8 +13,8 @@ nb_sf <- nb2lines(nb, coords = sp::coordinates(dat_sp), as_sf = TRUE)
 nb_sf <- st_set_crs(nb_sf, st_crs(dat))
 
 ggplot() +
-  geom_sf(data = nb_sf, col = "red", linewidth = 2) +
-  geom_sf(data = st_centroid(dat), col = "red", pch = 19, size = 4) +
+  geom_sf(data = nb_sf, col = "red", linewidth = 3) +
+  geom_sf(data = st_centroid(dat), col = "red", pch = 19, size = 8) +
   theme_void()
 
 ggsave("neighbours.png", width = 6, height = 6, dpi = 300)
